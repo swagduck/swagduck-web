@@ -2,37 +2,59 @@
   box-sizing: border-box;
 }
 .header{
-  background-color: #f1f1f1;
+  background-image: url(image/pexels-łukasz-martenka-3207527.jpg);
+  background-size: cover;
   text-align: center;
   padding: 20px;
+  overflow: hidden;
+}
+.logo{
+  float: left;
+  height: 190px;
+  width: 200px;
+  margin: auto;
+}
+.head-p{
+  display: inline-block;
+  font-size: 50px;
+  color: red;
+  font-style: italic;
+  margin-top: 64px;
+  margin-right: 117px;
+  text-shadow: 4px 4px black;
 }
 body{
   font-family: Arial, sans-serif;
   margin: 0;
-  padding: 10px;
-  background-color: #f1f1f1;
+  padding: auto;
+  background-color: #3b444b;
+  z-index: 0;
 }
 ul{
   margin: 0;
   padding: 0;
   list-style-type: none;
-  background-color: #333;
+  background-color: black;
   width: 100% ;
   overflow: hidden;
 }
 li{
   float: left;
+  border: 1px solid white;
+  border-top: none;
+  border-left: none;
+  border-bottom: none;
 }
 li:hover{
   transition: 0.5s;
-  background-color: lightgray;
+  background-color: red;
 }
 .active{
-  background-color: mediumseagreen;
+  background-color:  #333;
 }
 .active:hover{
   transition: 0.5s;
-  background-color: mediumaquamarine;
+  background-color:#ff0000;
 }
 li a{
   text-decoration: none;
@@ -60,6 +82,7 @@ li.dropdown{
 }
 .dropdown:hover .drop-content{
   display: block;
+  transform: translateY(0);
 }
 .drop-content a{
   color: black;
@@ -77,6 +100,8 @@ li.dropdown{
   color: white;
   font-size: 30px;
   padding: 14px 16px;
+  border-right: none;
+  border-left: 1px solid white;
 }
 .column-main{
   float: left;
@@ -86,7 +111,7 @@ li.dropdown{
   float: right;
   width: 25%;
   padding-left: 20px;
-  background-color: #f1f1f1;
+  background-color: #3B444B;
 }
 .row::after{
   content: "";
@@ -97,6 +122,7 @@ li.dropdown{
   background-color: white;
   padding: 20px;
   margin-top: 20px;
+  background-color: #0E1111;
 }
 .fakeimg{
  background-color: lightgray;
@@ -133,4 +159,16 @@ button{
   border: none;
   background-color: lightblue;
   cursor: default;
+}
+p{
+  color: white;
+}
+h1{
+  color: white;
+}
+h4{
+  color: white;
+}
+h2{
+  color: white;
 }
