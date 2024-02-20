@@ -1,0 +1,136 @@
+*{
+  box-sizing: border-box;
+}
+.header{
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 20px;
+}
+body{
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 10px;
+  background-color: #f1f1f1;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background-color: #333;
+  width: 100% ;
+  overflow: hidden;
+}
+li{
+  float: left;
+}
+li:hover{
+  transition: 0.5s;
+  background-color: lightgray;
+}
+.active{
+  background-color: mediumseagreen;
+}
+.active:hover{
+  transition: 0.5s;
+  background-color: mediumaquamarine;
+}
+li a{
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 14px 16px;
+}
+li a, .dropbtn {
+  display: inline-block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+li.dropdown{
+  display: inline-block;
+}
+.drop-content{
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 1px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown:hover .drop-content{
+  display: block;
+}
+.drop-content a{
+  color: black;
+  padding: 12px 16px;
+  text-align: left;
+  text-decoration: none;
+  display: block;
+}
+.drop-content a:hover{
+  background-color: lightgray;
+}
+.right{
+  float: right;
+  text-decoration: none;
+  color: white;
+  font-size: 30px;
+  padding: 14px 16px;
+}
+.column-main{
+  float: left;
+  width: 75%;
+}
+.column{
+  float: right;
+  width: 25%;
+  padding-left: 20px;
+  background-color: #f1f1f1;
+}
+.row::after{
+  content: "";
+  display: table;
+  clear: both;
+}
+.card{
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+.fakeimg{
+ background-color: lightgray;
+ padding: 5px;
+ overflow: hidden;
+}
+@media screen and (max-width:800px) {
+  .column-main, .column {
+    width: 100%;
+    padding: 0;
+  }
+}
+.footer{
+  text-align: center;
+  background-image: linear-gradient(to bottom right, blue, lightblue);
+  padding: 10px;
+  margin-top: 20px;
+}
+img{
+  width: 100%;
+  height: auto;
+}
+.rick{
+  display: none;
+  z-index: 3;
+}
+.show{
+  display: block;
+}
+button{
+  color:  white;
+  padding: 15px;
+  font-size: 30px;
+  border: none;
+  background-color: lightblue;
+  cursor: default;
+}
