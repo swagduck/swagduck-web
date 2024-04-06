@@ -4,47 +4,50 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/images/z5323342546980_1301d43eff00eafc9d9a31102b9c7a23.jpg"
+    />
     <title>Document</title>
   </head>
   <body>
-    <body>
-      <h1>Generator</h1>
-      <textarea id="prompt" placeholder="Enter a prompt..."></textarea>
-      <button id="generate">Generate</button>
-      <div id="result"></div>
+    <h1>Generator</h1>
+    <textarea id="prompt" placeholder="Enter a prompt..."></textarea>
+    <button id="generate">Generate</button>
+    <div id="result"></div>
 
-      <!-- Include the provided code -->
-      <script type="importmap">
-        {
-          "imports": {
-            "@google/generative-ai": "https://esm.run/@google/generative-ai"
-          }
+    <!-- Include the provided code -->
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
         }
-      </script>
-      <script type="module">
-        import { GoogleGenerativeAI } from "@google/generative-ai";
+      }
+    </script>
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
 
-        const API_KEY = "AIzaSyCY-WmOV9aC7HfiRlNkLerOuk13mhZcMQs";
-        const genAI = new GoogleGenerativeAI(API_KEY);
+      const API_KEY = "AIzaSyCY-WmOV9aC7HfiRlNkLerOuk13mhZcMQs";
+      const genAI = new GoogleGenerativeAI(API_KEY);
 
-        // Add a click event listener to the generate button
-        document.getElementById("generate").addEventListener("click", () => {
-          const prompt = document.getElementById("prompt").value;
-          const model = genAI.getGenerativeModel({
-            model: "gemini-pro",
-            max_tokens: 25,
-          });
-
-          async function run() {
-            const result = await model.generateContent(prompt);
-            const response = await result.response;
-            const text = response.text();
-            document.getElementById("result").innerText = text;
-          }
-
-          run();
+      // Add a click event listener to the generate button
+      document.getElementById("generate").addEventListener("click", () => {
+        const prompt = document.getElementById("prompt").value;
+        const model = genAI.getGenerativeModel({
+          model: "gemini-pro",
+          max_tokens: 15,
         });
-      </script>
-    </body>
+
+        async function run() {
+          const result = await model.generateContent(prompt);
+          const response = await result.response;
+          const text = response.text();
+          document.getElementById("result").innerText = text;
+        }
+
+        run();
+      });
+    </script>
   </body>
 </html>
